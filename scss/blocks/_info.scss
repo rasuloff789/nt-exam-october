@@ -1,0 +1,129 @@
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.info__contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 250px;
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+  &::before{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    content: '';
+    margin-right: 7px;
+    flex-shrink: 0;
+    background-image: url('../img/phone.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include retina-bg {
+      background-image: url('../img/phone@2x.png');
+    }
+  }
+}
+
+.info__contact-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.info__contact-heading{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: $medium-text;
+  color: $color-use;
+}
+
+.info__contact-number{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: $light-text;
+  color: $color-use;
+}
+
+.info__logo{
+  width: auto;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info__logo-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info__worktime{
+  display: flex;
+  align-items: center;
+  max-width: 250px;
+  &::before{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    content: '';
+    flex-shrink: 0;
+    margin-right: 7px;
+    background-image: url('../img/clock.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include retina-bg {
+      background-image: url('../img/clock@2x.png');
+    }
+  }
+}
+
+.info__worktime-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.info__worktime-verify{
+  color: #00B007;
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.info__worktime-text{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: $light-text;
+  color: $color-use;
+}
+
+@include breakpoint-down (1030px){
+  .info{
+    display: none;
+  }
+}
