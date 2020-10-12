@@ -1,0 +1,220 @@
+.services__container{
+  display: flex;
+  flex-direction: column;
+  background-image: url('../img/bg-logo.png');
+  background-repeat: no-repeat;
+  background-position: top 25px center;
+  background-size: 275px auto;
+  @include retina-bg {
+    background-image: url('../img/bg-logo@2x.png');
+  }
+}
+
+.services__heading{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 36px;
+  line-height: 42px;
+  color:$color-use ;
+  font-weight: $medium-text;
+  margin-top: 0;
+  margin-bottom: 11px;
+  text-align: center;
+  &::before{
+    width: 50px;
+    height: 3px;
+    content: '';
+    margin-bottom: 16px;
+    display: inline-block;
+    background-color: #FFD600;
+  }
+}
+
+.services__info{
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: $light-text;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 744px;
+  text-align: center;
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.services__box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services__box-button{
+  border: 2px solid #1D6ECB;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #fff;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+  &:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  &:active{
+    opacity: 0.5;
+  }
+}
+
+.arrow-right{
+  padding: 8px 12px 7px 15px;
+  margin-right: 25px;
+}
+
+.arrow-left{
+  padding: 7px 15px 8px 12px;
+  margin-left: 25px;
+}
+
+.services__list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+  margin-left: -17.5px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.dental{
+  &::before{
+    background-image: url('../img/clean.png');
+    @include retina-bg {
+      background-image: url('../img/clean@2x.png');
+    }
+  }
+}
+
+.chotka{
+  &::before{
+    background-image: url('../img/chotka.png');
+    @include retina-bg {
+      background-image: url('../img/chotka@2x.png');
+    }
+  }
+}
+
+.diagnostic{
+  &::before{
+    background-image: url('../img/search-dental.png');
+    @include retina-bg {
+      background-image: url('../img/search-dental@2x.png');
+    }
+  }
+}
+
+.pupu{
+  &::before{
+    background-image: url('../img/pari.png');
+    @include retina-bg {
+      background-image: url('../img/pari@2x.png');
+    }
+  }
+}
+
+.service{
+  margin-left: 17.5px;
+  margin-right: 17.5px;
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 26px;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  &::before{
+    width: 80px;
+    height: 70px;
+    content: '';
+    margin-bottom: 13px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: auto 70px;
+  }
+}
+
+.service__name{
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 0;
+  color: $color-use;
+  text-align: center;
+  font-weight: 400;
+  flex-grow: 1;
+  margin-bottom: 12px;
+  
+  
+}
+
+.service__oldprice{
+  margin-bottom: 3px;
+  font-weight: $medium-text;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.25);
+  text-decoration: line-through;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  &::before{
+    width: 25px;
+    height: 2px;
+    content: '';
+    margin-bottom: 13px;
+    display: inline-block;
+    background-color: #0A60C3;
+  }
+}
+
+.service__newprice{
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #0A60C3;
+  text-transform: uppercase;
+}
+
+@include breakpoint-down (900px){
+  
+  .services__info{
+    padding: 0 30px;
+  }
+  
+  .services__list{
+    margin-left: 0px;
+  }
+  
+  .service:first-child{
+    margin-left: 17px;
+  }
+  
+  .services__box-button{
+    display: none;
+  }
+}
+
+@include breakpoint-down (600px){
+  
+  .services__info{
+    padding: 0 ;
+  }
+  
+}
