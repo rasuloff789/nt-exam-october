@@ -1,0 +1,34 @@
+@include breakpoint-down(750px){
+  .body--nojs{
+    .header{
+      position: relative;
+    }
+    
+    .header__container{
+      position: relative;
+    }
+    
+    .navmenu{
+      justify-content: center;
+      flex-direction: column;
+    }
+    .navmenu__listbox{
+      position: relative;
+      display: flex;
+    }
+    .navmenu__logo{
+      margin: 0;
+      margin-bottom: 15px;
+    }
+    .hamburger{
+      display: none;
+    }
+    .navmenu__pagelist-link{
+      border: transparent;
+    }
+    .navmenu__socialist{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
