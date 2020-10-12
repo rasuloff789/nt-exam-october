@@ -6,7 +6,7 @@
   <title>Dental Pratice</title>
   <link rel="stylesheet" href="css/main.min.css">
 </head>
-<body>
+<body class="body--nojs">
   
   <header class="header">
     <div class="container         header__container">
@@ -35,10 +35,12 @@
           </div>
         </div>
       </div>
-      <div class="header__navmenu">
+      <div class="header__navmenu navmenu">
         <a class="navmenu__logo" href="./index.html">
           <img class="navmenu__logo-img" src="img/site-logo-tablet.png" srcset="img/site-logo-tablet.png 1x, img/site-logo-tablet@2x.png 2x" alt="Site logo :)" width="140" height="21">
-          
+        </a>
+        
+        <div class="navmenu__listbox">
           <ul class="navmenu__pagelist">
             <li class="navmenu__pagelist-item">
               <a href="./services.html" class="navmenu__pagelist-link">Services</a>
@@ -74,20 +76,19 @@
               </a>
             </li>
           </ul>
-          
-          <button class="hamburger hamburger--squeeze">
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
-            </div>
-          </button>
-          
         </div>
+        
+        <button class="hamburger hamburger--squeeze">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </button>
+        
       </div>
-    </header>
-    
-    
-    
-    <script src="js/main.js"></script>
-  </body>
-  </html>
+    </div>
+  </header>
   
+  
+  <script src="js/main.js"> </script>
+</body>
+</html>

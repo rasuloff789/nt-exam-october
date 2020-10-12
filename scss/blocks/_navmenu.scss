@@ -1,0 +1,158 @@
+.navmenu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 35px;
+  border-radius: 5px;
+  background-color: #0055B8;
+}
+
+.navmenu__logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  flex-shrink: 0;
+}
+
+.navmenu__listbox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+}
+
+.navmenu__pagelist{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  margin-left: -17.5px;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+
+
+.navmenu__pagelist-item{
+  margin-left: 17.5px;
+  margin-right: 17.5px;
+}
+
+.navmenu__pagelist-link{
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  color: $color-light;
+  text-decoration: none;
+  transition: color 0.4s ease,
+  opacity 0.4s ease;
+  &:hover{
+    color: #FFD600;
+  }
+  &:active{
+    opacity: .6;
+  }
+}
+
+.navmenu__socialist{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -6px;
+  flex-shrink: 0;
+}
+
+.navmenu__socialist-item{
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.navmenu__socialist-link{
+  display: flex;
+  align-items: center;
+  transition: opacity 0.4s ease;
+  flex-shrink: 0;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+@include breakpoint-down(1030px){
+  .navmenu{
+    border-radius: 0;
+    position: relative;
+  }
+  
+  .navmenu__logo{
+    display: flex;
+    margin-right: 100px;
+  }
+}
+
+@include breakpoint-down(750px){
+  .navmenu__listbox{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0055B8;
+    flex-direction: column;
+    display: none;
+  }
+  
+  .navmenu__listbox--open{
+    display: flex;
+  }
+  
+  .navmenu__pagelist{
+    flex-direction: column;
+    margin-right: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .navmenu__pagelist-item{
+    width: 100%;
+    margin: 0;
+  }
+  
+  .navmenu__pagelist-link{
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid #FFD600;
+    color: #FFD600;
+    text-align: center;
+    padding: 24px 50px;
+    &:hover{
+      background-color: #FFD600;
+      color: #0055B8;
+    }
+    &:active{
+      opacity: 1;
+    }
+  }
+  
+  .navmenu__socialist{
+    margin-top: 65px;
+    margin-bottom: 25px;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  //! nojs
+  .navmenu--nojs{
+justify-content: center;
+
+  }
+}

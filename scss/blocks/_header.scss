@@ -4,3 +4,9 @@
   left: 0;
   width: 100%;
 }
+
+@include breakpoint-down(1030px){
+  .header__container{
+    padding: 0;
+  }
+}
