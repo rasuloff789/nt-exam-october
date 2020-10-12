@@ -2,9 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // width: 100%;
   padding: 20px 35px;
   border-radius: 5px;
   background-color: #0055B8;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  transform: translateY(50%);
 }
 
 .navmenu__logo{
@@ -93,6 +100,10 @@
   .navmenu{
     border-radius: 0;
     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
   }
   
   .navmenu__logo{

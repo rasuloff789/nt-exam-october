@@ -3,6 +3,13 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 678;
+  background-color: #fff;
+}
+
+.header__container{
+  position: relative;
+  padding-bottom: 32px;
 }
 
 @include breakpoint-down(1030px){
