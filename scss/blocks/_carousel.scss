@@ -121,3 +121,50 @@
 .intro__button-img{
   display: block;
 }
+
+@include breakpoint-down(1300px){
+  .carousel__intro{
+    top: 150px;
+    width: 100%;
+  }
+}
+
+@include breakpoint-down(600px){
+  .carousel__intro{
+    position: static;
+    transform: translateX(0);
+    align-items: center;
+  }
+  .intro__text{
+    max-width: 230px;
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+  .intro__heading{
+    font-size: 30px;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 25px;
+  }
+  .intro__link{
+    display: none;
+  }
+  
+  .intro__buttonbox{
+    position: absolute;
+    top: -45px;
+    left: 20px;
+    transform: translateY(-100%);
+  }
+  .intro__button-left{
+    padding: 6px;
+  }
+  .intro__button-right{
+    padding: 9px 14px;
+  }
+  .intro__button-img{
+    height: 23px;
+    width: auto;
+  }
+}
