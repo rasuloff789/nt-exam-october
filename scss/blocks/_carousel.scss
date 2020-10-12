@@ -1,0 +1,123 @@
+.carousel__container{
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__list{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.carousel__item{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carosel__img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel__intro {
+  position: absolute;
+  left: 50%;
+  top: 305px;
+  width: 1180px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intro__text{
+  font-size: 18px;
+  line-height: 21px;
+  color: $color-use;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  max-width: 550px;
+  display: inline-block;
+}
+
+.intro__heading{
+  max-width: 550px;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: $bold-text;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
+.intro__link{
+  max-width: 550px;
+  min-width: 265px;
+  display: inline-block;
+  margin-top: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 140px;
+  padding: 25px 50px;
+  background-color: #0055B8;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  transition: all 0.4s ease;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.intro__buttonbox{
+  display: flex;
+  max-width: 550px;
+}
+
+.intro__button-left{
+  outline: none;
+  padding:  23px 16px 23px 12px ;
+  border: none;
+  background-color:  #FFD600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.intro__button-right{
+  outline: none;
+  padding: 23px 26px 23px 21px;
+  margin-left: 9px;
+  border: none;
+  background-color:  #FFD600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.intro__button-img{
+  display: block;
+}
