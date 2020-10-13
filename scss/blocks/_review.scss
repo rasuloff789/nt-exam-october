@@ -1,0 +1,142 @@
+.review{
+  margin: 75px 0;
+}
+
+.review__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review__heading{
+  font-weight: $medium-text;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-use;
+  &::before{
+    width: 50px;
+    height: 3px;
+    display: inline-block;
+    content: '';
+    background-color: #FFD600;
+    margin-bottom: 16px;
+  }
+}
+
+.review__info{
+  font-weight: $light-text;
+  font-size: 18px;
+  line-height: 25px;
+  display: inline-block;
+  max-width: 440px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.review__list{
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: -40px;
+  // margin-bottom: 50px;
+}
+
+.review__item{
+  max-width: 355px;
+  margin-left:35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review__img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.review__author{
+  font-weight: $medium-text;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+.review__text{
+  font-weight: $light-text;
+  font-size: 18px;
+  line-height: 25px;
+  color: #4D4D4D;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.review__post{
+  margin-top: 50px;
+  text-decoration: none;
+  color: #4D4D4D;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 25px;
+  border: 2px solid #0055B8;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 265px;
+  transition: all .4s ease;
+  &:hover{
+    color: #fff;
+    background-color: #0055B8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+@include breakpoint-down(1200px){
+  .review__list{
+    margin-left: 0;
+  }
+  
+  .review__item{
+    margin-bottom: 10px;
+    margin-left: 0;
+    flex-shrink: 1;
+    &:nth-child(3n+2){
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@include breakpoint-down(1110px){
+.review__heading , .review__info{
+  text-align: center;
+}
+
+  .review__item{
+    max-width: 305px;
+  }
+}
+
+@include breakpoint-down(975px){
+.review__list{
+  align-items: center;
+  justify-content: center;
+}
+
+  .review__item{
+    &:not(:first-child){
+        display: none;
+    }
+  }
+}

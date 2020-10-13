@@ -106,9 +106,11 @@
   }
 }
 @include breakpoint-down(750px){
- .hamburger{
-  display: inline-block;
- }
+  .header__navmenu {
+    .hamburger{
+      display: inline-block;
+    }
+  }
 }
 
 

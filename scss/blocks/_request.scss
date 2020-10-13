@@ -90,11 +90,16 @@
   z-index: 5;
   flex-direction: column;
   width: 540px;
-  margin-top: -40px;
   padding: 25px 35px;
   background-color: #0055B8;
   border-radius: 5px;
   flex-shrink: 0;
+}
+
+.request__container {
+  .request__post{
+    margin-top: -40px;
+  }
 }
 
 .request__post-heading{
