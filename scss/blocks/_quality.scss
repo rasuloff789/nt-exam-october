@@ -18,8 +18,8 @@
   display: flex;
   flex-direction: column;
   max-width: 550px;
-  margin-right: 150px;
-  margin-left: auto;
+  margin-right: auto;
+  margin-left: 110px;
   background-image: url('../img/bg-logo.png');
   background-repeat: no-repeat;
   background-position: top 20px left;
@@ -162,6 +162,7 @@
   
   .quality__better-item{
     justify-content: center;
+    text-align: center;
   }
   
   .quality__better-text{
