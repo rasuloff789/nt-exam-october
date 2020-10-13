@@ -1,0 +1,126 @@
+.hero__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.hero__box{
+  display: flex;
+  flex-direction: column;
+  max-width: 510px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero__img{
+  flex-shrink: 0;
+}
+
+.hero__heading{
+  align-self: flex-end;
+  display: inline-flex;
+  flex-direction: column;
+  font-weight: $medium-text;
+  color: $color-use;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 34px;
+  &::before{
+    width: 50px;
+    height: 3px;
+    content: '';
+    align-self: flex-end;
+    margin-bottom: 16px;
+    display: inline-block;
+    background-color: #FFD600;
+  }
+}
+
+.hero__text{
+  font-weight: $light-text;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 34px;
+}
+
+.hero__linkbox{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  &::before{
+    width: 85px;
+    height: 70px;
+    display: inline-block;
+    content: '';
+    margin-right: 36px;
+    background-image: url('../img/imzo.png');
+    @include retina-bg {
+      background-image: url('../img/imzo@2x.png');
+    }
+    background-repeat: no-repeat;
+    background-size: 85px auto;
+    background-position: center center;
+  }
+}
+
+.hero__link{
+  min-width: 265px;
+  padding: 25px 40px;
+  background-color: #0055B8;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+
+@include breakpoint-down (1030px){
+  .hero__box{
+    margin-left: 20px;
+  }
+}
+
+@include breakpoint-down (850px){
+  .hero__container{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero__box{
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    order: 1;
+    padding: 0 20px;
+  }
+  
+  .hero__heading{
+    margin-bottom: 5px;
+    &::before{
+      align-self: flex-start;
+      margin-bottom: 15px;
+    }
+  }
+  
+  .hero__text{
+    margin-bottom: 25px;
+  }
+  
+  .hero__linkbox{
+    &::before{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .hero__link{
+    min-width: 175px;
+  }
+}
