@@ -1,5 +1,5 @@
 .request{
-  margin-top: -7px;
+  margin-top: -10px;
   margin-bottom: 70px;
 }
 
@@ -190,8 +190,10 @@
   .request__container{
     padding: 0;
   }
-  .request__post{
-    width: 50%;
+  .request__post-top{
+    .request__post{
+      width: 50%;
+    }
   }
 }
 
@@ -199,8 +201,10 @@
   .request__list{
     display: none;
   }
-  .request__post{
+  .request__post-top{
+    
     width: 100%;
+    
   }
 }
 
@@ -208,8 +212,9 @@
   .request{
     margin-top: 0;
   }
-  .request__post{
+  .request__post-top{
     width: 100%;
     margin-top: 0;
+    
   }
 }

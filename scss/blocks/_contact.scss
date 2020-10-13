@@ -1,0 +1,126 @@
+.contact__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+.contact__textbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  
+  background-image: url('../img/bg-logo.png');
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+  background-size: 275px auto;
+  @include retina-bg{
+    background-image: url('../img/bg-logo@2x.png');
+  }
+}
+
+.contact__heading{
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: $color-use;
+  margin-top: 0;
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &::before{
+    width: 50px;
+    height: 3px;
+    display: inline-block;
+    content: '';
+    background-color: #FFD600;
+    margin-bottom: 16px;
+  }
+}
+
+.contact__text{
+  max-width: 880px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
+.contact__box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  img{
+    width: 100%;
+    height: 760px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.contact__form{
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-100%) translateY(50%);
+}
+
+.contact__link-visible{
+  display: none;
+}
+
+@include breakpoint-down (1130px){
+  .contact__form{
+    left: 20px;
+    transform: translateX(0) translateY(50%);
+  }
+}
+
+@include breakpoint-down (700px){
+  .contact__textbox{
+    background-position: top 110px center;
+  }
+  
+  .contact__box{
+    order: -2;
+    width: 100%;
+  }
+  .contact__form{
+    left: 0;
+    bottom: 0;
+    order: -2;
+    position: relative;
+    transform: translateY(0) translateX(0);
+    width: 100%;
+  }
+  .contact__link{
+    display: none;
+    width: 100%;
+    height: auto;
+    order: 5;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: fill;
+    }
+  }
+  .contact__heading{
+    margin-top: 70px;
+  }
+  .contact__link-visible{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

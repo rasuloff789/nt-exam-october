@@ -6,6 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  background-image: url('../img/bg-logo.png');
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+  background-size: 275px auto;
+  @include retina-bg{
+    background-image: url('../img/bg-logo@2x.png');
+  }
 }
 
 .review__heading{
@@ -52,7 +60,7 @@
 
 .review__item{
   max-width: 355px;
-  margin-left:35px;
+  margin-left:25px;
   display: flex;
   flex-direction: column;
 }
@@ -119,24 +127,24 @@
 }
 
 @include breakpoint-down(1110px){
-.review__heading , .review__info{
-  text-align: center;
-}
-
+  .review__heading , .review__info{
+    text-align: center;
+  }
+  
   .review__item{
     max-width: 305px;
   }
 }
 
 @include breakpoint-down(975px){
-.review__list{
-  align-items: center;
-  justify-content: center;
-}
-
+  .review__list{
+    align-items: center;
+    justify-content: center;
+  }
+  
   .review__item{
     &:not(:first-child){
-        display: none;
+      display: none;
     }
   }
 }
